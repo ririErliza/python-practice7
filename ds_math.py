@@ -1,3 +1,4 @@
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -27,10 +28,19 @@ import matplotlib.pyplot as plt
 '''-----------------   Plotting Functions  --------------------'''
 '''------------------------------------------------------------'''
 
-health_data = pd.read_csv('data.csv', header = 0, sep = ",")
+# health_data = pd.read_csv('data.csv', header = 0, sep = ",")
 
-health_data.plot(x = 'Average_Pulse', y ='Calorie_Burnage')
+# health_data.plot(x = 'Average_Pulse', y ='Calorie_Burnage')
+# plt.ylim(ymin=0)
+# plt.xlim(xmin=0)
+
+# plt.show()
+
+health_data = pd.read_csv("data.csv", header=0, sep=",")
+
+health_data.plot(x ='Average_Pulse', y='Calorie_Burnage', kind='line')
 plt.ylim(ymin=0)
 plt.xlim(xmin=0)
 
 plt.show()
+
