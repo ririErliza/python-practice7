@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
 
 '''------------------------------------------------------------'''
 '''-----------------    Linear Functions   --------------------'''
@@ -23,3 +23,14 @@ import numpy as np
 #  axis.
 
 
+'''------------------------------------------------------------'''
+'''-----------------   Plotting Functions  --------------------'''
+'''------------------------------------------------------------'''
+
+health_data = pd.read_csv('data.csv', header = 0, sep = ",")
+
+health_data.plot(x = 'Average_Pulse', y ='Calorie_Burnage')
+plt.ylim(ymin=0)
+plt.xlim(xmin=0)
+
+plt.show()
