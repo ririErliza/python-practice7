@@ -80,6 +80,8 @@ print(health_data.info())
 # memory usage: 560.0+ bytes
 # None
 
+
+
 # astype()
 # convert the data
 
@@ -87,3 +89,20 @@ health_data["Average_Pulse"] = health_data["Average_Pulse"].astype(float)
 health_data["Max_Pulse"] = health_data["Max_Pulse"].astype(float)
 
 print (health_data.info())
+# Data columns (total 6 columns):
+#  #   Column           Non-Null Count  Dtype
+# ---  ------           --------------  -----
+#  0   Duration         10 non-null     float64
+#  1   Average_Pulse    10 non-null     float64
+#  2   Max_Pulse        10 non-null     float64
+#  3   Calorie_Burnage  10 non-null     float64
+#  4   Hours_Work       10 non-null     float64
+#  5   Hours_Sleep      10 non-null     float64
+# dtypes: float64(6)
+# memory usage: 560.0 bytes
+# None
+
+
+# describe()
+# to summarize data
+print(health_data.describe())
