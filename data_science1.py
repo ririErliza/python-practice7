@@ -52,3 +52,38 @@ print(Average_calorie_burnage)
 '''------------------------------------------------------------'''
 '''------------------   Data Preparation   --------------------'''
 '''------------------------------------------------------------'''
+
+health_data = pd.read_csv("data.csv", header=0, sep=",")
+print(health_data)
+
+
+# head() 
+print(health_data.head()) # only showing top 5 rows
+
+# dropna()
+# remove blank rows
+health_data.dropna(axis=0, inplace=True)
+print(health_data)
+
+# info()
+print(health_data.info())
+# Data columns (total 6 columns):
+#  #   Column           Non-Null Count  Dtype
+# ---  ------           --------------  -----
+#  0   Duration         10 non-null     float64
+#  1   Average_Pulse    10 non-null     object
+#  2   Max_Pulse        10 non-null     object
+#  3   Calorie_Burnage  10 non-null     float64
+#  4   Hours_Work       10 non-null     float64
+#  5   Hours_Sleep      10 non-null     float64
+# dtypes: float64(4), object(2)
+# memory usage: 560.0+ bytes
+# None
+
+# astype()
+# convert the data
+
+health_data["Average_Pulse"] = health_data["Average_Pulse"].astype(float)
+health_data["Max_Pulse"] = health_data["Max_Pulse"].astype(float)
+
+print (health_data.info())
