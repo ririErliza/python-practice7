@@ -1,6 +1,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 '''------------------------------------------------------------'''
 '''-----------------    Linear Functions   --------------------'''
@@ -44,3 +45,32 @@ plt.xlim(xmin=0)
 
 plt.show()
 
+'''------------------------------------------------------------'''
+'''-----------------   Slope and Intercept --------------------'''
+'''------------------------------------------------------------'''
+
+# calculate slope
+def slope(x1,y1,x2,y2):
+    s = (y2-y1)/(x2-x1)
+    return s
+
+print(slope(80,240,90,260)) # 2.0
+
+
+
+# np.polyfit()
+health_data = pd.read_csv("data.csv", header=0, sep=",")
+
+x = health_data["Average_Pulse"]
+y = health_data["Calorie_Burnage"]
+
+slope_intercept = np.polyfit(x,y,1)
+# The last parameter of the function specifies the degree
+#  of the function, which in this case is "1".
+
+print(slope_intercept)
+
+# linear functions = 1.degree function. In our example,
+#  the function is linear, which is in the 1.degree.
+#  That means that all coefficients (the numbers) are
+#  in the power of one.
