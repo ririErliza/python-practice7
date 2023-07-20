@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as ani
 import numpy as np
 
+
+# RGB to show color
 GREY = (0.78, 0.78, 0.78) #uninfected
 RED = (0.96, 0.15, 0.15) #infected
 GREEN = (0, 0.86, 0.03) #recovered
@@ -18,3 +20,7 @@ COVID19_PARAMS = {
     "fatality_rate":0.034,
     "serial_interval":7
 }
+
+class Virus():
+    def __init__(self,params):
+        pass
