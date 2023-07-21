@@ -60,3 +60,13 @@ s = pd.Series([np.nan, 1, 2, np.nan, 3])
 s = s.fillna(method='ffill')
 
 print(s)
+
+a = np.array(([1,2,3,4,5], [6,7,8,9,10]))
+b = np.max(a, axis=1)
+
+print("b: ", b.sum())
+
+a = np.ones((2,4))
+print(a)
+b = a.reshape((4,2))
+print(b)
